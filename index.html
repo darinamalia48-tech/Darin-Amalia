@@ -1353,6 +1353,8 @@
         <div class="contact-content">
 
 
+            <!-- INFORMASI KONTAK -->
+
             <div class="contact-text">
 
                 <h3>
@@ -1360,48 +1362,129 @@
                 </h3>
 
                 <p>
-                    Jika ingin menghubungi saya atau berdiskusi
-                    mengenai project, jangan ragu untuk menghubungi
-                    saya melalui kontak berikut.
+                    Punya pertanyaan, ingin berdiskusi, atau ingin
+                    bekerja sama? Kamu bisa menghubungi saya melalui
+                    beberapa kontak di bawah ini.
                 </p>
 
 
-                <div class="contact-item">
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:darinamalia48@gmail.com"
+                    class="contact-card"
+                >
 
                     <div class="contact-icon">
                         📧
                     </div>
 
-                    <div>
+                    <div class="contact-detail">
 
-                        <h4>
-                            Email
-                        </h4>
+                        <span>Email</span>
 
-                        <p>
-                            emailkamu@gmail.com
-                        </p>
+                        <strong>
+                            darinamalia48@gmail.com
+                        </strong>
+
+                        <small>
+                            Kirim email kepada saya
+                        </small>
 
                     </div>
 
-                </div>
+                    <div class="contact-arrow">
+                        →
+                    </div>
+
+                </a>
 
 
-                <div class="contact-item">
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://instagram.com/darinamaliaaa"
+                    target="_blank"
+                    class="contact-card"
+                >
 
                     <div class="contact-icon">
-                        📱
+                        📸
                     </div>
 
-                    <div>
+                    <div class="contact-detail">
 
-                        <h4>
-                            Instagram
-                        </h4>
+                        <span>Instagram</span>
 
-                        <p>
-                            @usernamekamu
-                        </p>
+                        <strong>
+                            @darinamaliaaa
+                        </strong>
+
+                        <small>
+                            Kunjungi Instagram saya
+                        </small>
+
+                    </div>
+
+                    <div class="contact-arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="https://wa.me/6285730672174"
+                    target="_blank"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        💬
+                    </div>
+
+                    <div class="contact-detail">
+
+                        <span>WhatsApp</span>
+
+                        <strong>
+                            0857-3067-2174
+                        </strong>
+
+                        <small>
+                            Chat dengan saya melalui WhatsApp
+                        </small>
+
+                    </div>
+
+                    <div class="contact-arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div class="contact-detail">
+
+                        <span>Location</span>
+
+                        <strong>
+                            Indonesia
+                        </strong>
+
+                        <small>
+                            Based in Indonesia
+                        </small>
 
                     </div>
 
@@ -1411,37 +1494,67 @@
             </div>
 
 
-            <form
-                class="contact-form"
-                onsubmit="kirimPesan(event)"
-            >
+            <!-- FORM -->
 
-                <input
-                    type="text"
-                    placeholder="Nama"
-                    required
+            <div class="contact-form-container">
+
+                <h3>
+                    Send Me a Message
+                </h3>
+
+                <p>
+                    Isi form di bawah ini untuk meninggalkan pesan.
+                </p>
+
+
+                <form
+                    class="contact-form"
+                    onsubmit="kirimPesan(event)"
                 >
 
-                <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                >
+                    <label>
+                        Nama
+                    </label>
 
-                <textarea
-                    rows="6"
-                    placeholder="Tulis pesan..."
-                    required
-                ></textarea>
+                    <input
+                        type="text"
+                        placeholder="Masukkan nama kamu"
+                        required
+                    >
 
-                <button
-                    type="submit"
-                    class="btn"
-                >
-                    Kirim Pesan
-                </button>
 
-            </form>
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="Masukkan email kamu"
+                        required
+                    >
+
+
+                    <label>
+                        Pesan
+                    </label>
+
+                    <textarea
+                        rows="6"
+                        placeholder="Tulis pesan kamu di sini..."
+                        required
+                    ></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="btn"
+                    >
+                        Kirim Pesan →
+                    </button>
+
+                </form>
+
+            </div>
 
 
         </div>
