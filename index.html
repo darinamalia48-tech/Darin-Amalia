@@ -3,335 +3,1361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Darin Amalia</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Darin Amalia | Portfolio</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f1117;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+
+            background: rgba(15, 17, 23, 0.92);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #252936;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 30px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #a78bfa;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c9cbd1;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #a78bfa;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            max-width: 1100px;
+            margin: auto;
+
+            padding: 150px 30px 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            max-width: 620px;
+        }
+
+        .small-title {
+            color: #a78bfa;
+            font-size: 14px;
+            letter-spacing: 4px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #a78bfa;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #c9cbd1;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            color: #9296a3;
+            max-width: 560px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+
+            background: #a78bfa;
+            color: #111;
+
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #c4b5fd;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 25px;
+
+            border: 1px solid #444856;
+            color: #ffffff;
+
+            border-radius: 8px;
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            border-color: #a78bfa;
+            color: #a78bfa;
+        }
+
+        /* =========================
+           PROFILE ICON
+        ========================= */
+
+        .profile-area {
+            width: 330px;
+            height: 330px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-shrink: 0;
+        }
+
+        .profile {
+            width: 280px;
+            height: 280px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                #a78bfa,
+                #6366f1
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow:
+                0 0 0 15px rgba(167, 139, 250, 0.08),
+                0 0 60px rgba(167, 139, 250, 0.25);
+
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        .profile-text {
+            width: 230px;
+            height: 230px;
+
+            border-radius: 50%;
+
+            background: #171923;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 70px;
+            font-weight: bold;
+            color: #a78bfa;
+        }
+
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* =========================
+           GENERAL SECTION
+        ========================= */
+
+        section {
+            padding: 100px 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title p {
+            color: #a78bfa;
+            font-size: 12px;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        #about {
+            background: #13161f;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #999daa;
+            margin-bottom: 18px;
+        }
+
+        .about-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-card {
+            background: #1a1d27;
+            border: 1px solid #292d39;
+
+            padding: 25px;
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: #a78bfa;
+        }
+
+        .info-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .info-card h4 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .info-card p {
+            color: #8d919e;
+            font-size: 13px;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #171a23;
+            border: 1px solid #292d39;
+
+            padding: 30px 22px;
+            border-radius: 14px;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: #a78bfa;
+        }
+
+        .skill-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #8e929e;
+            font-size: 13px;
+            min-height: 70px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+
+            background: #2b2f3b;
+
+            border-radius: 10px;
+            margin-top: 20px;
+
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: #a78bfa;
+            border-radius: 10px;
+        }
+
+        .skill-percent {
+            display: block;
+            text-align: right;
+
+            color: #a78bfa;
+            font-size: 12px;
+
+            margin-top: 6px;
+        }
+
+        /* =========================
+           PORTFOLIO
+        ========================= */
+
+        #portfolio {
+            background: #13161f;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            background: #191c26;
+
+            border: 1px solid #292d39;
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            border-color: #a78bfa;
+        }
+
+        .project-image {
+            height: 190px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #252039,
+                #171923
+            );
+
+            font-size: 60px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-category {
+            color: #a78bfa;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .project h3 {
+            margin: 8px 0;
+            font-size: 20px;
+        }
+
+        .project p {
+            color: #8f93a0;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            color: #a78bfa;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .timeline {
+            max-width: 800px;
+            margin: auto;
+
+            border-left: 2px solid #303440;
+            padding-left: 35px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            width: 14px;
+            height: 14px;
+
+            background: #a78bfa;
+
+            border-radius: 50%;
+
+            left: -43px;
+            top: 5px;
+
+            box-shadow: 0 0 15px rgba(167, 139, 250, 0.5);
+        }
+
+        .timeline-date {
+            color: #a78bfa;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .timeline-item h3 {
+            margin: 5px 0;
+        }
+
+        .timeline-item p {
+            color: #8e929e;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact {
+            background: #13161f;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .contact-text > p {
+            color: #8f93a0;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+
+            background: #1d202b;
+
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 20px;
+        }
+
+        .contact-item h4 {
+            font-size: 14px;
+        }
+
+        .contact-item p {
+            color: #8e929e;
+            font-size: 13px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            background: #191c26;
+
+            border: 1px solid #303440;
+            border-radius: 8px;
+
+            padding: 14px;
+
+            color: white;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #a78bfa;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #292d39;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: #0c0e13;
+        }
+
+        footer h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        footer h3 span {
+            color: #a78bfa;
+        }
+
+        footer p {
+            color: #717581;
+            font-size: 12px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .portfolio {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding-top: 180px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .profile-area {
+                width: 250px;
+                height: 250px;
+            }
+
+            .profile {
+                width: 210px;
+                height: 210px;
+            }
+
+            .profile-text {
+                width: 170px;
+                height: 170px;
+                font-size: 50px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .skills,
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn,
+            .btn-outline {
+                text-align: center;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Darin.</div>
 
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+
+    <div class="navbar">
+
+        <div class="logo">
+            Darin<span>.</span>
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
 
 
-    <!-- HOME -->
-    <section id="home" class="hero">
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home">
+
+    <div class="hero">
 
         <div class="hero-text">
-            <p class="hello">HELLO, I'M</p>
 
-            <h1>Darin Amalia</h1>
-
-            <h2>Student & Marketing Enthusiast</h2>
-
-            <p>
-                Saya adalah mahasiswa yang memiliki ketertarikan
-                pada bidang pemasaran, kreativitas, teknologi,
-                dan pengembangan diri.
+            <p class="small-title">
+                HELLO, I'M
             </p>
 
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn">Lihat Portfolio</a>
-                <a href="#contact" class="btn-outline">Hubungi Saya</a>
+            <h1>
+                Darin <span>Amalia</span>
+            </h1>
+
+            <h2>
+                Student & Marketing Enthusiast
+            </h2>
+
+            <p class="hero-description">
+
+                Saya adalah mahasiswa yang memiliki ketertarikan
+                pada bidang pemasaran, bisnis, kreativitas,
+                teknologi, dan pengembangan diri.
+
+            </p>
+
+            <div class="buttons">
+
+                <a href="#portfolio" class="btn">
+                    Lihat Portfolio
+                </a>
+
+                <a href="#contact" class="btn-outline">
+                    Hubungi Saya
+                </a>
+
             </div>
+
         </div>
 
 
-        <div class="hero-image">
-            <div class="profile-circle">
-                <img src="foto.jpg" alt="Foto Darin">
+        <div class="profile-area">
+
+            <div class="profile">
+
+                <div class="profile-text">
+                    DA
+                </div>
+
             </div>
+
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
 
         <div class="section-title">
+
             <p>ABOUT ME</p>
+
             <h2>Tentang Saya</h2>
+
         </div>
 
-        <div class="about-container">
+
+        <div class="about-content">
 
             <div class="about-text">
-                <h3>Hi! I'm Darin 👋</h3>
+
+                <h3>
+                    Hi, I'm Darin 👋
+                </h3>
 
                 <p>
-                    Saya merupakan seorang mahasiswa yang sedang menempuh
-                    pendidikan di perguruan tinggi. Saya memiliki minat
-                    terhadap dunia pemasaran, bisnis, teknologi, dan
-                    kreativitas.
+                    Saya merupakan seorang mahasiswa yang sedang
+                    menempuh pendidikan di perguruan tinggi.
+                    Saya memiliki ketertarikan terhadap dunia
+                    pemasaran, bisnis, teknologi, dan kreativitas.
                 </p>
 
                 <p>
-                    Selama menjadi mahasiswa, saya terbiasa mengerjakan
-                    berbagai tugas individu maupun kelompok, mulai dari
-                    membuat analisis pemasaran, menyusun strategi promosi,
-                    membuat presentasi, hingga mengembangkan proyek berbasis
-                    teknologi.
+                    Selama menjadi mahasiswa, saya terbiasa
+                    mengerjakan berbagai tugas individu maupun
+                    kelompok seperti analisis pemasaran,
+                    strategi promosi, presentasi, dan proyek
+                    berbasis teknologi.
                 </p>
 
                 <p>
-                    Saya percaya bahwa setiap pengalaman merupakan kesempatan
-                    untuk belajar dan berkembang menjadi pribadi yang lebih baik.
+                    Saya percaya bahwa setiap pengalaman merupakan
+                    kesempatan untuk belajar, berkembang, dan
+                    meningkatkan kemampuan diri.
                 </p>
+
             </div>
 
 
             <div class="about-info">
 
-                <div class="info-box">
-                    <span>🎓</span>
-                    <div>
-                        <h4>Status</h4>
-                        <p>Mahasiswa</p>
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🎓
                     </div>
+
+                    <h4>
+                        Status
+                    </h4>
+
+                    <p>
+                        Mahasiswa
+                    </p>
+
                 </div>
 
-                <div class="info-box">
-                    <span>📍</span>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Indonesia</p>
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📍
                     </div>
+
+                    <h4>
+                        Location
+                    </h4>
+
+                    <p>
+                        Indonesia
+                    </p>
+
                 </div>
 
-                <div class="info-box">
-                    <span>💼</span>
-                    <div>
-                        <h4>Interest</h4>
-                        <p>Marketing & Business</p>
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        💼
                     </div>
+
+                    <h4>
+                        Interest
+                    </h4>
+
+                    <p>
+                        Marketing & Business
+                    </p>
+
                 </div>
 
-                <div class="info-box">
-                    <span>🌱</span>
-                    <div>
-                        <h4>Goal</h4>
-                        <p>Keep Learning & Growing</p>
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌱
                     </div>
+
+                    <h4>
+                        Goal
+                    </h4>
+
+                    <p>
+                        Keep Learning & Growing
+                    </p>
+
                 </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- SKILLS -->
-    <section id="skills" class="section skills-section">
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="container">
 
         <div class="section-title">
+
             <p>MY ABILITIES</p>
+
             <h2>Skills</h2>
+
         </div>
 
-        <div class="skills-container">
+
+        <div class="skills">
+
 
             <div class="skill-card">
-                <div class="skill-icon">📊</div>
-                <h3>Marketing</h3>
+
+                <div class="skill-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Marketing
+                </h3>
+
                 <p>
                     Memahami dasar pemasaran, segmentasi pasar,
-                    strategi promosi, dan marketing mix.
+                    target konsumen, dan marketing mix.
                 </p>
 
-                <div class="progress">
-                    <div style="width: 85%;"></div>
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        style="width: 85%;">
+                    </div>
+
                 </div>
-                <span>85%</span>
+
+                <span class="skill-percent">
+                    85%
+                </span>
+
             </div>
 
 
             <div class="skill-card">
-                <div class="skill-icon">🎨</div>
-                <h3>Creativity</h3>
+
+                <div class="skill-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Creativity
+                </h3>
+
                 <p>
                     Mampu mengembangkan ide kreatif untuk
                     konten, promosi, dan presentasi.
                 </p>
 
-                <div class="progress">
-                    <div style="width: 80%;"></div>
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        style="width: 80%;">
+                    </div>
+
                 </div>
-                <span>80%</span>
+
+                <span class="skill-percent">
+                    80%
+                </span>
+
             </div>
 
 
             <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <h3>Microsoft Office</h3>
+
+                <div class="skill-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Microsoft Office
+                </h3>
+
                 <p>
-                    Terbiasa menggunakan Microsoft Word,
-                    PowerPoint, dan Excel untuk kebutuhan akademik.
+                    Terbiasa menggunakan Word, PowerPoint,
+                    dan Excel untuk kebutuhan akademik.
                 </p>
 
-                <div class="progress">
-                    <div style="width: 85%;"></div>
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        style="width: 85%;">
+                    </div>
+
                 </div>
-                <span>85%</span>
+
+                <span class="skill-percent">
+                    85%
+                </span>
+
             </div>
 
 
             <div class="skill-card">
-                <div class="skill-icon">🗣️</div>
-                <h3>Communication</h3>
+
+                <div class="skill-icon">
+                    🗣️
+                </div>
+
+                <h3>
+                    Communication
+                </h3>
+
                 <p>
                     Mampu bekerja dalam tim dan menyampaikan
                     ide dalam kegiatan presentasi.
                 </p>
 
-                <div class="progress">
-                    <div style="width: 80%;"></div>
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        style="width: 80%;">
+                    </div>
+
                 </div>
-                <span>80%</span>
+
+                <span class="skill-percent">
+                    80%
+                </span>
+
             </div>
+
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="section">
+<!-- =========================
+     PORTFOLIO
+========================= -->
+
+<section id="portfolio">
+
+    <div class="container">
 
         <div class="section-title">
+
             <p>MY WORK</p>
+
             <h2>Portfolio</h2>
+
         </div>
 
-        <div class="portfolio-container">
 
-            <div class="portfolio-card">
-                <div class="portfolio-image">📢</div>
+        <div class="portfolio">
 
-                <div class="portfolio-content">
-                    <span>Marketing</span>
-                    <h3>Analisis Strategi Pemasaran</h3>
+
+            <div class="project">
+
+                <div class="project-image">
+                    📢
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Marketing
+                    </span>
+
+                    <h3>
+                        Analisis Strategi Pemasaran
+                    </h3>
 
                     <p>
-                        Proyek analisis mengenai strategi pemasaran,
-                        segmentasi pasar, target konsumen, dan marketing mix.
+                        Analisis mengenai strategi pemasaran,
+                        segmentasi pasar, target konsumen,
+                        dan marketing mix.
                     </p>
 
-                    <a href="#">View Project →</a>
+                    <a href="#contact" class="project-link">
+                        View Project →
+                    </a>
+
                 </div>
+
             </div>
 
 
-            <div class="portfolio-card">
-                <div class="portfolio-image">💻</div>
+            <div class="project">
 
-                <div class="portfolio-content">
-                    <span>Web Development</span>
-                    <h3>Sistem Informasi</h3>
+                <div class="project-image">
+                    💻
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Web Development
+                    </span>
+
+                    <h3>
+                        Sistem Informasi
+                    </h3>
 
                     <p>
-                        Proyek pembuatan website sederhana sebagai
-                        media informasi dan pengelolaan data.
+                        Proyek pembuatan website sederhana
+                        sebagai media informasi dan pengelolaan data.
                     </p>
 
-                    <a href="#">View Project →</a>
+                    <a href="#contact" class="project-link">
+                        View Project →
+                    </a>
+
                 </div>
+
             </div>
 
 
-            <div class="portfolio-card">
-                <div class="portfolio-image">🎤</div>
+            <div class="project">
 
-                <div class="portfolio-content">
-                    <span>Presentation</span>
-                    <h3>Marketing Presentation</h3>
+                <div class="project-image">
+                    🎤
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Presentation
+                    </span>
+
+                    <h3>
+                        Marketing Presentation
+                    </h3>
 
                     <p>
-                        Presentasi kelompok mengenai strategi pemasaran
+                        Presentasi mengenai strategi pemasaran
                         dan perkembangan pemasaran digital.
                     </p>
 
-                    <a href="#">View Project →</a>
+                    <a href="#contact" class="project-link">
+                        View Project →
+                    </a>
+
                 </div>
+
             </div>
 
+
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- EDUCATION -->
-    <section class="section education-section">
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+    <div class="container">
 
         <div class="section-title">
+
             <p>MY JOURNEY</p>
+
             <h2>Education</h2>
+
         </div>
+
 
         <div class="timeline">
 
+
             <div class="timeline-item">
+
                 <div class="timeline-dot"></div>
 
-                <div class="timeline-content">
-                    <span>2024 - Sekarang</span>
-                    <h3>Perguruan Tinggi</h3>
-                    <p>
-                        Menempuh pendidikan di bidang Manajemen
-                        dengan fokus pada pemasaran dan bisnis.
-                    </p>
-                </div>
+                <span class="timeline-date">
+                    2024 - Sekarang
+                </span>
+
+                <h3>
+                    Perguruan Tinggi
+                </h3>
+
+                <p>
+                    Menempuh pendidikan di bidang Manajemen
+                    dengan ketertarikan pada pemasaran,
+                    bisnis, dan pengembangan strategi.
+                </p>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-dot"></div>
 
-                <div class="timeline-content">
-                    <span>2021 - 2024</span>
-                    <h3>Sekolah Menengah</h3>
-                    <p>
-                        Menyelesaikan pendidikan sekolah menengah
-                        dan mulai mengembangkan berbagai keterampilan.
-                    </p>
-                </div>
+                <span class="timeline-date">
+                    2021 - 2024
+                </span>
+
+                <h3>
+                    Sekolah Menengah
+                </h3>
+
+                <p>
+                    Menyelesaikan pendidikan sekolah menengah
+                    dan mulai mengembangkan berbagai keterampilan.
+                </p>
+
             </div>
+
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact-section">
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="container">
 
         <div class="section-title">
+
             <p>GET IN TOUCH</p>
+
             <h2>Contact Me</h2>
+
         </div>
 
-        <div class="contact-container">
 
-            <div class="contact-info">
+        <div class="contact-content">
 
-                <h3>Let's Connect!</h3>
+
+            <div class="contact-text">
+
+                <h3>
+                    Let's Connect! 👋
+                </h3>
 
                 <p>
                     Jika ingin menghubungi saya atau berdiskusi
@@ -339,634 +1365,129 @@
                     saya melalui kontak berikut.
                 </p>
 
-                <div class="contact-item">
-                    <span>📧</span>
-                    <div>
-                        <h4>Email</h4>
-                        <p>emailkamu@gmail.com</p>
-                    </div>
-                </div>
 
                 <div class="contact-item">
-                    <span>📱</span>
-                    <div>
-                        <h4>Instagram</h4>
-                        <p>@usernamekamu</p>
+
+                    <div class="contact-icon">
+                        📧
                     </div>
+
+                    <div>
+
+                        <h4>
+                            Email
+                        </h4>
+
+                        <p>
+                            emailkamu@gmail.com
+                        </p>
+
+                    </div>
+
                 </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📱
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Instagram
+                        </h4>
+
+                        <p>
+                            @usernamekamu
+                        </p>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
 
-            <form class="contact-form">
+            <form
+                class="contact-form"
+                onsubmit="kirimPesan(event)"
+            >
 
-                <input type="text" placeholder="Nama" required>
+                <input
+                    type="text"
+                    placeholder="Nama"
+                    required
+                >
 
-                <input type="email" placeholder="Email" required>
+                <input
+                    type="email"
+                    placeholder="Email"
+                    required
+                >
 
-                <textarea rows="6" placeholder="Pesan" required></textarea>
+                <textarea
+                    rows="6"
+                    placeholder="Tulis pesan..."
+                    required
+                ></textarea>
 
-                <button type="submit" class="btn">
+                <button
+                    type="submit"
+                    class="btn"
+                >
                     Kirim Pesan
                 </button>
 
             </form>
 
+
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- FOOTER -->
-    <footer>
+<!-- =========================
+     FOOTER
+========================= -->
 
-        <h3>Darin.</h3>
+<footer>
 
-        <p>
-            © 2026 Darin Amalia. All Rights Reserved.
-        </p>
+    <h3>
+        Darin<span>.</span>
+    </h3>
 
-    </footer>
+    <p>
+        © 2026 Darin Amalia. All Rights Reserved.
+    </p>
+
+</footer>
 
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function kirimPesan(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Pesan berhasil dikirim! Terima kasih sudah menghubungi saya 😊"
+        );
+
+        event.target.reset();
+
+    }
+
+</script>
+
 
 </body>
 </html>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fff;
-    color: #333;
-}
-
-
-/* ================= NAVBAR ================= */
-
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-}
-
-.navbar {
-    max-width: 1100px;
-    margin: auto;
-    height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #777;
-}
-
-
-/* ================= HERO ================= */
-
-.hero {
-    min-height: 100vh;
-    max-width: 1100px;
-    margin: auto;
-    padding: 120px 25px 60px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-}
-
-.hero-text {
-    max-width: 600px;
-}
-
-.hello {
-    font-size: 14px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-.hero h1 {
-    font-size: 55px;
-    line-height: 1.2;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.hero-text > p:not(.hello) {
-    line-height: 1.8;
-    color: #666;
-}
-
-.hero-buttons {
-    margin-top: 30px;
-    display: flex;
-    gap: 15px;
-}
-
-.btn,
-.btn-outline {
-    display: inline-block;
-    padding: 13px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.btn {
-    background: #222;
-    color: white;
-}
-
-.btn:hover {
-    background: #555;
-    transform: translateY(-3px);
-}
-
-.btn-outline {
-    border: 1px solid #222;
-    color: #222;
-}
-
-.btn-outline:hover {
-    background: #222;
-    color: white;
-}
-
-
-/* ================= PROFILE ================= */
-
-.hero-image {
-    display: flex;
-    justify-content: center;
-}
-
-.profile-circle {
-    width: 330px;
-    height: 330px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 10px solid #f1f1f1;
-}
-
-.profile-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* ================= SECTION ================= */
-
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 100px 25px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title p {
-    font-size: 12px;
-    letter-spacing: 4px;
-    color: #888;
-}
-
-.section-title h2 {
-    font-size: 35px;
-    margin-top: 8px;
-}
-
-
-/* ================= ABOUT ================= */
-
-.about-container {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.about-text h3 {
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    color: #666;
-    line-height: 1.9;
-    margin-bottom: 15px;
-}
-
-.about-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.info-box {
-    padding: 20px;
-    background: #f7f7f7;
-    border-radius: 12px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.info-box span {
-    font-size: 25px;
-}
-
-.info-box h4 {
-    font-size: 14px;
-}
-
-.info-box p {
-    font-size: 12px;
-    color: #777;
-    margin-top: 3px;
-}
-
-
-/* ================= SKILLS ================= */
-
-.skills-section {
-    background: #fafafa;
-    max-width: none;
-    padding-left: max(25px, calc((100% - 1100px) / 2));
-    padding-right: max(25px, calc((100% - 1100px) / 2));
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.skill-card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-}
-
-.skill-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-.skill-card h3 {
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    font-size: 13px;
-    color: #777;
-    line-height: 1.7;
-    min-height: 90px;
-}
-
-.progress {
-    width: 100%;
-    height: 6px;
-    background: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 15px;
-}
-
-.progress div {
-    height: 100%;
-    background: #333;
-    border-radius: 10px;
-}
-
-.skill-card > span {
-    display: block;
-    font-size: 12px;
-    text-align: right;
-    margin-top: 7px;
-}
-
-
-/* ================= PORTFOLIO ================= */
-
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.portfolio-card {
-    border-radius: 15px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-8px);
-}
-
-.portfolio-image {
-    height: 180px;
-    background: #eeeeee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-}
-
-.portfolio-content {
-    padding: 25px;
-}
-
-.portfolio-content span {
-    font-size: 11px;
-    color: #888;
-}
-
-.portfolio-content h3 {
-    margin: 8px 0;
-}
-
-.portfolio-content p {
-    font-size: 13px;
-    color: #777;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.portfolio-content a {
-    text-decoration: none;
-    color: #222;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-
-/* ================= EDUCATION ================= */
-
-.education-section {
-    background: #fafafa;
-    max-width: none;
-    padding-left: max(25px, calc((100% - 800px) / 2));
-    padding-right: max(25px, calc((100% - 800px) / 2));
-}
-
-.timeline {
-    position: relative;
-    padding-left: 30px;
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 6px;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: #ddd;
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -30px;
-    top: 5px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #222;
-}
-
-.timeline-content span {
-    font-size: 12px;
-    color: #888;
-}
-
-.timeline-content h3 {
-    margin: 7px 0;
-}
-
-.timeline-content p {
-    color: #777;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-
-/* ================= CONTACT ================= */
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-}
-
-.contact-info h3 {
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-
-.contact-info > p {
-    color: #777;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.contact-item {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.contact-item span {
-    font-size: 25px;
-}
-
-.contact-item h4 {
-    font-size: 14px;
-}
-
-.contact-item p {
-    color: #777;
-    font-size: 13px;
-    margin-top: 3px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #555;
-}
-
-.contact-form button {
-    border: none;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-/* ================= FOOTER ================= */
-
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-footer h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-footer p {
-    font-size: 12px;
-    color: #aaa;
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 850px) {
-
-    .nav-menu {
-        gap: 15px;
-    }
-
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .portfolio-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-        gap: 10px;
-    }
-
-    .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .hero {
-        padding-top: 160px;
-    }
-
-    .profile-circle {
-        width: 230px;
-        height: 230px;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero h2 {
-        font-size: 18px;
-    }
-
-    .skills-container,
-    .portfolio-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-info {
-        grid-template-columns: 1fr;
-    }
-}
